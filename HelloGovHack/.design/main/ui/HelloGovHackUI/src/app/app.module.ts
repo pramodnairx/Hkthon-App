@@ -4,16 +4,18 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { BMIComponentComponent } from './components/bmicomponent/bmicomponent.component';
+import { AbsmapComponent } from './components/absmap/absmap.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BMIComponentComponent,
+    AbsmapComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
