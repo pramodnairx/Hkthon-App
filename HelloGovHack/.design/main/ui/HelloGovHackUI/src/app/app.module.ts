@@ -6,6 +6,8 @@ import { TreeModule } from '@circlon/angular-tree-component';
 import { AppComponent } from './app.component';
 import { BMIComponentComponent } from './components/bmicomponent/bmicomponent.component';
 import { AbsmapComponent } from './components/absmap/absmap.component';
+import { AbsmapserviceService } from './services/absmapservice.service';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,7 @@ import { AbsmapComponent } from './components/absmap/absmap.component';
     HttpClientModule,
     TreeModule
   ],
-  providers: [],
+  providers: [AbsmapserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -9,6 +9,9 @@
  */
 package com.infosys.ea.govhack.controller;
 
+import java.io.IOException;
+import java.util.List;
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,6 +19,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.infosys.ea.govhack.model.BMI;
+import com.infosys.ea.govhack.model.LGA;
+import com.infosys.ea.govhack.util.GeoJSONLGAMapper;
 
 /**
  * @author prnair
@@ -37,11 +42,9 @@ public class HelloGovHackController {
 		}
 
 		@GetMapping("/getLGACoordinates")
-		public String getLGACoordinates() {
-			return vicLGACoordinates;
+		public List<LGA> getLGACoordinates() throws IOException {
+			return GeoJSONLGAMapper.mapGeojsonToLGA("");
 		}
 		
-		
-private String vicLGACoordinates =""; 
 
 }
